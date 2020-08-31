@@ -3,10 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A36F1D524FD8574000FD71D /* ServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A36F1D424FD8574000FD71D /* ServiceProtocol.swift */; };
+		2A36F1D724FD858A000FD71D /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A36F1D624FD858A000FD71D /* Service.swift */; };
+		2A36F1D924FD85BC000FD71D /* ConnectErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A36F1D824FD85BC000FD71D /* ConnectErrors.swift */; };
+		2A36F1DC24FD8608000FD71D /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A36F1DB24FD8608000FD71D /* Cache.swift */; };
 		2AFE796C24FD8176005B9097 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFE796B24FD8176005B9097 /* AppDelegate.swift */; };
 		2AFE796E24FD8176005B9097 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFE796D24FD8176005B9097 /* SceneDelegate.swift */; };
 		2AFE797024FD8176005B9097 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFE796F24FD8176005B9097 /* ViewController.swift */; };
@@ -30,6 +34,10 @@
 
 /* Begin PBXFileReference section */
 		0268D78CF7988D31585BF00B /* Pods_MovieDB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MovieDB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A36F1D424FD8574000FD71D /* ServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProtocol.swift; sourceTree = "<group>"; };
+		2A36F1D624FD858A000FD71D /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		2A36F1D824FD85BC000FD71D /* ConnectErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectErrors.swift; sourceTree = "<group>"; };
+		2A36F1DB24FD8608000FD71D /* Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
 		2AFE796824FD8176005B9097 /* MovieDB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieDB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AFE796B24FD8176005B9097 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2AFE796D24FD8176005B9097 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -77,6 +85,24 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		2A36F1D324FD8533000FD71D /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				2A36F1D424FD8574000FD71D /* ServiceProtocol.swift */,
+				2A36F1D624FD858A000FD71D /* Service.swift */,
+				2A36F1D824FD85BC000FD71D /* ConnectErrors.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		2A36F1DA24FD85FE000FD71D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2A36F1DB24FD8608000FD71D /* Cache.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		2AFE795F24FD8176005B9097 = {
 			isa = PBXGroup;
 			children = (
@@ -100,6 +126,8 @@
 		2AFE796A24FD8176005B9097 /* MovieDB */ = {
 			isa = PBXGroup;
 			children = (
+				2A36F1DA24FD85FE000FD71D /* Model */,
+				2A36F1D324FD8533000FD71D /* Service */,
 				2AFE796B24FD8176005B9097 /* AppDelegate.swift */,
 				2AFE796D24FD8176005B9097 /* SceneDelegate.swift */,
 				2AFE796F24FD8176005B9097 /* ViewController.swift */,
@@ -128,7 +156,6 @@
 				FB43F3F08AEAB5082F79CA83 /* Pods-MovieDBTests.debug.xcconfig */,
 				BF8B492C21AE26B3CFFE982A /* Pods-MovieDBTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -300,9 +327,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A36F1DC24FD8608000FD71D /* Cache.swift in Sources */,
 				2AFE797024FD8176005B9097 /* ViewController.swift in Sources */,
 				2AFE796C24FD8176005B9097 /* AppDelegate.swift in Sources */,
+				2A36F1D724FD858A000FD71D /* Service.swift in Sources */,
+				2A36F1D924FD85BC000FD71D /* ConnectErrors.swift in Sources */,
 				2AFE796E24FD8176005B9097 /* SceneDelegate.swift in Sources */,
+				2A36F1D524FD8574000FD71D /* ServiceProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

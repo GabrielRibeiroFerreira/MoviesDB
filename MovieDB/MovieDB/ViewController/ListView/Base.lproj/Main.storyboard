@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1yo-6U-q4g">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Filmes-->
+        <scene sceneID="bJn-Ek-iKF">
+            <objects>
+                <tableViewController id="56w-AQ-MAe" customClass="ListTableViewController" customModule="MovieDB" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="bXj-uA-WWr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <connections>
+                            <outlet property="dataSource" destination="56w-AQ-MAe" id="QQ0-g5-sWD"/>
+                            <outlet property="delegate" destination="56w-AQ-MAe" id="rVn-Kh-QsV"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Filmes" id="3QE-CG-9na">
+                        <barButtonItem key="leftBarButtonItem" title="Página anterior" id="2gR-5y-sWa">
+                            <connections>
+                                <action selector="previousAction:" destination="56w-AQ-MAe" id="dAI-H8-H7x"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Próxima página " id="pS9-KQ-qYN">
+                            <connections>
+                                <action selector="nextAction:" destination="56w-AQ-MAe" id="iHb-ou-5NV"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="nextButton" destination="pS9-KQ-qYN" id="0lY-hx-Tm8"/>
+                        <outlet property="previousButton" destination="2gR-5y-sWa" id="adP-J3-MR8"/>
+                        <segue destination="qiH-wN-HIG" kind="show" identifier="toMovieSegue" id="f5Z-Ie-Au1"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Ym-QH-PWN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1304" y="100"/>
+        </scene>
+        <!--Movie-->
+        <scene sceneID="dbA-bW-iKx">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Movie" id="qiH-wN-HIG" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="g3y-3J-7YH"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YL2-fI-PmH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2036" y="99"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="bCn-WI-acF">
+            <objects>
+                <navigationController id="1yo-6U-q4g" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="hHO-Js-xAs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="56w-AQ-MAe" kind="relationship" relationship="rootViewController" id="Z2M-wx-pO6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="auk-69-LgZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="351" y="100"/>
+        </scene>
+    </scenes>
+</document>

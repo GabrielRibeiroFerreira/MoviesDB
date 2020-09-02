@@ -10,8 +10,11 @@ import Foundation
 
 struct Cache {
     static let imageCache = NSCache<NSString, NSData>()
+    static let listCache = NSCache<NSString, Wrapper>()
+    static let movieCache = NSCache<NSString, Movie>()
+    static let peopleCache = NSCache<NSString, CreditsWrapper>()
     
-//    static func getKey(type: DataType, offset: Int, limit: Int) -> String {
+//    static func getKey(page: Int) -> String {
 //        let key = type.string() + String(offset) + "/" + String(limit)
 //        return key
 //    }
